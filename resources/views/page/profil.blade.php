@@ -73,7 +73,8 @@
                                 @foreach ($albums as $album)
                                     <a href="/albums/{{ $album->id }}">
                                     <div class="col-lg-3 col-md-6 col-sm-6">
-                                            <div class="blog__item small__item set-bg" data-setbg="{{ asset('album/'.$album->cover)  }}">
+                                            <div class="blog__item small__item set-bg" data-setbg="">
+                                                <img src="{{ asset('album/'.$album->cover)  }}" class="blog__item small__item" alt="">
                                                 <div class="blog__item__text">
                                                  <h4>{{ $album->name }}</h4>
                                                 </div>
