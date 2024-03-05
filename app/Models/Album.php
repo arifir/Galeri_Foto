@@ -17,6 +17,9 @@ class Album extends Model
         'id_user'
     ];
 
+    protected $table = 'albums';
+
+
     public function photo(){
         return $this->hasMany(Photo::class, 'id_photo', 'id');
     }
@@ -24,4 +27,6 @@ class Album extends Model
     public function user(){
         return $this->belongsTo(User::class, 'id_user', 'id');
     }
+
+    
 }

@@ -105,10 +105,6 @@ class PostinganController extends Controller
     //Add Postingan
     public function AddPostingan (Request $request){
 
-        // $pesan = [
-        //     'id_album.required' => 'Masukan Album jika belum punya buat terlebih dulu'
-        // ];
-
         $request->validate([
             'judul_photo' => 'required',
             'deskripsi' => 'required',
@@ -130,13 +126,13 @@ class PostinganController extends Controller
         ];
 
         Photo::create($data);
-        return redirect('/add-foto')->with('success', 'Postingan telah di upload');
+        // return redirect('/add-foto')->with('success', 'Postingan telah di upload');
 
-        // if($validate == true){
-        //     return redirect('/add-foto')->with('success', 'Postingan telah di upload');
-        // } else {
-        //     return redirect()->back();
-        // }
+        if($data == true){
+            return redirect('/profil')->with('success', 'Postingan telah di upload');
+        } else {
+            return redirect()->back();
+        }
     }
     //End Add Postingan
 

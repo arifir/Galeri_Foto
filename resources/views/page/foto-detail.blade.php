@@ -5,16 +5,6 @@
 @include('include.navbarDetailFoto')
 
 
-
-                                    {{-- <div  class="follow-button"
-                                        data-user-id="{{ $detail->user_id }}"
-                                        data-following="{{ $isFollowing ? 'true' : 'false' }}">
-                                        @csrf
-                                        <button type="button" class="text-sm text-biru">
-                                            {{ $isFollowing ? 'Unfollow' : 'Follow' }}
-                                        </button>
-                                    </div> --}}
-
     <!-- Anime Section Begin -->
     <section class="anime-details spad">
         <div class="container">
@@ -51,7 +41,7 @@
                                                 <div id="follow" class="{{ $isFollowing ? 'follow_2' : 'follow'}} follow follow-button" data-user-id="{{ $data->id_user }}"
                                                     data-following="{{ $isFollowing ? 'true' : 'false' }}">
                                                     @csrf
-                                                    <button hidden  class="btn-flw" type="button">{{ $isFollowing ? 'Unfollow' : 'Follow' }}</button>
+                                                    <button hidden class="btn-flw" type="button">{{ $isFollowing ? 'Unfollow' : 'Follow' }}</button>
                                                 </div>
                                             @else
                                                 <div id="follow" class="{{ $isFollowing ? 'follow_2' : 'follow'}} follow follow-button" data-user-id="{{ $data->id_user }}"
